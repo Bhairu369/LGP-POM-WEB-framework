@@ -20,27 +20,25 @@ public class Loginscreen {
 	@FindBy(id = "ButtonLogin")
 	WebElement loginbutton;
 	
-	@FindBy(css = "#main > div.container > div.Register.paper-bg > div > div > div.CntButtons.CntButtons--payments > a")
-	WebElement cancelbtn;
-	
-	
+		
 	public Loginscreen(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void loginpage()
+	public void loginpage() throws InterruptedException 
 	{
 		lgnbtn.click();
 		
-		emails.sendKeys("paanipuri@yopmail.com");
+		emails.sendKeys("testka@yopmail.com");
 		
 		psrd.sendKeys("123456");
 		
+		Thread.sleep(3000);
 		loginbutton.click();
 		
-		cancelbtn.click();
+		
 	}
 
 }

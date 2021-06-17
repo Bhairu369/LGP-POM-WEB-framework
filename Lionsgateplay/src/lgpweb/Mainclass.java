@@ -27,7 +27,7 @@ public class Mainclass
 		
 		}
 		
-		public static void main(String[] args) {
+		public static void main(String[] args) throws InterruptedException {
 			
 			Mainclass obj2=new Mainclass();
 			obj2.basematerial();
@@ -35,8 +35,8 @@ public class Mainclass
 			
 			//Signup page
 			
-			//signupscreen obj3=new signupscreen(driver);
-			//obj3.signup();
+			signupscreen obj3=new signupscreen(driver);
+			obj3.signup();
 			
 			
 			//Login page
@@ -45,6 +45,13 @@ public class Mainclass
 			obj4.loginpage();
 			
 
+			
+			Home_Page obj6=new Home_Page(driver);
+			obj6.homepg();
+			
+
+			Add_payment_details_screen obj5=new Add_payment_details_screen(driver);
+			obj5.paymentscreen();
 	}
 
 }
