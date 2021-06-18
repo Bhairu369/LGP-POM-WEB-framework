@@ -38,6 +38,9 @@ public class Mainclass
 			signupscreen obj3=new signupscreen(driver);
 			obj3.signup();
 			
+			Logout obj7=new Logout(driver);
+			obj7.logut();
+			
 			
 			//Login page
 			

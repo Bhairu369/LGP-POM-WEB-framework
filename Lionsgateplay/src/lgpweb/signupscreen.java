@@ -12,6 +12,24 @@ public class signupscreen
 	@FindBy(id="signup-button")
 	WebElement signupbtn;
 	
+	@FindBy(id = "btn_TandC")
+	WebElement termsbtn;
+	
+	@FindBy(xpath = "//*[@id=\"legalModalContent\"]/div/div/div[1]/button/span[1]")
+	WebElement closebtns;
+	
+	@FindBy(id = "btn_TandC")
+	WebElement privacybtn;
+	
+	@FindBy(xpath = "/html/body/div[10]/div/div/div[1]/button/span[1]")
+	WebElement cnclbtn;
+	
+	@FindBy(id = "signup-link")
+	WebElement loginbtn;
+	
+	@FindBy(xpath = "//*[@id=\"signup-link\"]")
+	WebElement signupg;
+	
 	@FindBy(id = "email")
 	WebElement emailbx;
 	
@@ -25,20 +43,42 @@ public class signupscreen
 	WebElement cancelbtn;
 	
 	
-	
-	
-	
 	public signupscreen(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void signup()
+	public void signup() throws InterruptedException
 	{
 		signupbtn.click();
 		
-		emailbx.sendKeys("paani@yopmail.com");
+		termsbtn.click();
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+		closebtns.click();
+		
+		privacybtn.click();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+		cnclbtn.click();
+		
+		loginbtn.click();
+		
+		signupg.click();
+		
+		emailbx.sendKeys("testprab@yopmail.com");
 		
 		pswrd.sendKeys("123456");
 		
