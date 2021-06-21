@@ -47,14 +47,14 @@ public class Mainclass
 			Loginscreen obj4=new Loginscreen(driver);
 			obj4.loginpage();
 			
-
+			Add_payment_details_screen obj5=new Add_payment_details_screen(driver);
+			obj5.paymentscreen();
 			
 			Home_Page obj6=new Home_Page(driver);
 			obj6.homepg();
 			
 
-			Add_payment_details_screen obj5=new Add_payment_details_screen(driver);
-			obj5.paymentscreen();
+			
 	}
 
 }

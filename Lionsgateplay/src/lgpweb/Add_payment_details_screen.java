@@ -10,22 +10,41 @@ public class Add_payment_details_screen
 	
 	WebDriver driver;
 	
-	@FindBy(id = "changePayment")
-	WebElement apdbutton;
+    @FindBy(xpath = "//*[@id=\"main\"]/div[1]/div[1]/div/div/div[1]/div[4]")
+    WebElement yearlyplan;
+	
+    @FindBy(xpath = "//*[@id=\"main\"]/div[1]/div/div[1]/div[2]/ul/li[1]/a/span[1]")
+    WebElement creditcrd;
+    
+    @FindBy(css = "#main > div.container > div.Register.paper-bg > div > div > div.payuPlans.payuPlans-IN > div.paymentPlan2.paymentPlan.paymentPlanSelected")
+    WebElement yearlyplans;
+    
+    @FindBy(xpath = "/html/body/main/div[1]/div/div[1]/div[2]/ul/li[2]/a/span[1]")
+    WebElement dbtcrd;
+    
+    @FindBy(xpath = "//*[@id=\"main\"]/div[1]/div[1]/div/div/div[1]/div[2]")
+    WebElement mnthlyplan;
+	
+	@FindBy(xpath = "//*[@id=\"main\"]/div[1]/div/div[1]/div[2]/ul/li[1]/a/span[1]")
+	WebElement credcrd;
+	
+	@FindBy(xpath = "//*[@id=\"main\"]/div[1]/div[1]/div/div/div[1]/div[2]")
+    WebElement mnthlyplans;
+	
+	@FindBy(xpath = "/html/body/main/div[1]/div/div[1]/div[2]/ul/li[2]/a/span[1]")
+	WebElement dbtcard;
 	
 	@FindBy(id = "voucherCode")
-	WebElement voucherbox;
+	WebElement vouchercd;
 	
-	@FindBy(css = "#voucherCode")
-	WebElement evouchercd;
+	@FindBy(xpath = "//*[@id=\"voucherCode\"]")
+	WebElement vcher;
 	
 	@FindBy(id = "btnContinueVoucher")
-	WebElement subscribebtn;
+	WebElement subscibebtns;
 	
 	@FindBy(id = "startWatching")
-	WebElement thankyubtn;
-	
-	
+	WebElement thnkubtn;
 	
 	public Add_payment_details_screen(WebDriver driver)
 	{
@@ -36,19 +55,49 @@ public class Add_payment_details_screen
 	
 	public void paymentscreen() throws InterruptedException
 	{
-		apdbutton.click();
+	
+		yearlyplan.click();
 		
-		Thread.sleep(2000);
-		voucherbox.click();
+		
+		creditcrd.click();
+		Thread.sleep(3000);
+		
+		driver.navigate().back();
+		
+		yearlyplans.click();
+		
+		dbtcrd.click();
 		
 		Thread.sleep(3000);
-		evouchercd.sendKeys("m01lgptest");
+		driver.navigate().back();
 		
-		Thread.sleep(1000);
-		subscribebtn.click();
+		mnthlyplan.click();
 		
-		Thread.sleep(2000);
-		thankyubtn.click();
+		credcrd.click();
+		
+		Thread.sleep(3000);
+		
+		driver.navigate().back();
+		
+		mnthlyplans.click();
+		
+		dbtcard.click();
+		
+		Thread.sleep(3000);
+		
+		driver.navigate().back();
+		
+		vouchercd.click();
+		
+		vcher.sendKeys("M01LGPTEST");
+		
+	    subscibebtns.click();
+	    
+	    driver.getTitle();
+	    Thread.sleep(3000);
+	    thnkubtn.click();
+		
+		
 	}
 
 }

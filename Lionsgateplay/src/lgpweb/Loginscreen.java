@@ -24,7 +24,8 @@ public class Loginscreen {
 	@FindBy(id = "supportBtn")
 	WebElement suportbtn;
 	
-
+	@FindBy(xpath = "//*[@id=\"close-contact-modal\"]/span[1]")
+	WebElement cnclbtn;
 	
 	@FindBy(id = "emailLogin")
 	WebElement emails;
@@ -54,17 +55,10 @@ public class Loginscreen {
 		
 		suportbtn.click();
 		
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		cnclbtn.click();
 		
-		driver.findElement(By.id("contact-email")).sendKeys("hellboy@yopmail.com");
-		
-		driver.findElement(By.xpath("/html/body/main/div[1]/div[4]/div/div/div[2]/form/fieldset/div[2]/div[1]/button")).click();
-		
-		Thread.sleep(3000);
-		Select subject=new Select(driver.findElement(By.xpath("//*[@id=\"contact-modal\"]/div/div/div[2]/form/fieldset/div[2]/div[1]/ul/li[2]/a")));
-		subject.selectByValue("Playing movies/series from website");
-		
-		emails.sendKeys("testka@yopmail.com");
+		emails.sendKeys("testsokab@yopmail.com");
 		
 		psrd.sendKeys("123456");
 		

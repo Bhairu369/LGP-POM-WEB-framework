@@ -1,5 +1,6 @@
 package lgpweb;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,6 +18,9 @@ public class Home_Page
 	
 	@FindBy(id = "watch_now")
 	WebElement wtchbtn;
+	
+	@FindBy(id = "watch_trailer")
+	WebElement trailerbtn;
 	
 	
 	
@@ -40,8 +44,9 @@ public class Home_Page
 		Thread.sleep(3000);
 		
 		
+		driver.navigate().back();
 		
-		
+		trailerbtn.click();
 	}
 	
 
