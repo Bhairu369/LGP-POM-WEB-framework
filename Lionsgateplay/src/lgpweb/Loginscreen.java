@@ -58,7 +58,7 @@ public class Loginscreen {
 		Thread.sleep(2000);
 		cnclbtn.click();
 		
-		emails.sendKeys("testsokab@yopmail.com");
+		emails.sendKeys("testsoke@yopmail.com");
 		
 		psrd.sendKeys("123456");
 		

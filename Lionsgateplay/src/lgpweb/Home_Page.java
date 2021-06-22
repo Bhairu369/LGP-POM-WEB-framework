@@ -1,6 +1,5 @@
 package lgpweb;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,13 +12,13 @@ public class Home_Page
 	
 	
 	
-	@FindBy(css = "#carosuel-1 > div.owl-stage-outer > div > div:nth-child(9) > div > a > img")
-	WebElement mile22;
+	@FindBy(xpath = "/html/body/main/section/div[4]/div/div[1]/div[1]/div/div[15]/div/a/img")
+	WebElement babel;
 	
-	@FindBy(id = "watch_now")
+	@FindBy(xpath = "//*[@id=\"watch_now\"]/svg")
 	WebElement wtchbtn;
 	
-	@FindBy(id = "watch_trailer")
+	@FindBy(xpath = "/html/body/main/section/div[2]/article/header/div/button[1]/svg/path[1]")
 	WebElement trailerbtn;
 	
 	
@@ -36,7 +35,7 @@ public class Home_Page
 	{
 		
 		
-		mile22.click();
+		babel.click();
 		
 		Thread.sleep(3000);
 		

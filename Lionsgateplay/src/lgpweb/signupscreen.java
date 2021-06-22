@@ -78,7 +78,7 @@ public class signupscreen
 		
 		signupg.click();
 		
-		emailbx.sendKeys("testsokab@yopmail.com");
+		emailbx.sendKeys("testsoke@yopmail.com");
 		
 		pswrd.sendKeys("123456");
 		
