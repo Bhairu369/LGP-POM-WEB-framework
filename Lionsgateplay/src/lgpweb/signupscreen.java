@@ -78,10 +78,11 @@ public class signupscreen
 		
 		signupg.click();
 		
-		emailbx.sendKeys("testsoke@yopmail.com");
+		emailbx.sendKeys("enudo@yopmail.com");
 		
 		pswrd.sendKeys("123456");
 		
+		Thread.sleep(2000);
 		signupbutton.click();
 		
 		cancelbtn.click();

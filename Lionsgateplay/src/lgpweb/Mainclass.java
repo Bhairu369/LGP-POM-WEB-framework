@@ -35,11 +35,11 @@ public class Mainclass
 			
 			//Signup page
 			
-			//signupscreen obj3=new signupscreen(driver);
-			//obj3.signup();
+			signupscreen obj3=new signupscreen(driver);
+			obj3.signup();
 			
-			//Logout obj7=new Logout(driver);
-			//obj7.logut();
+			Logout obj7=new Logout(driver);
+			obj7.logut();
 			
 			
 			//Login page
@@ -47,14 +47,14 @@ public class Mainclass
 			Loginscreen obj4=new Loginscreen(driver);
 			obj4.loginpage();
 			
-			//Add_payment_details_screen obj5=new Add_payment_details_screen(driver);
-			//obj5.paymentscreen();
+			Add_payment_details_screen obj5=new Add_payment_details_screen(driver);
+			obj5.paymentscreen();
 			
-			/*Home_Page obj6=new Home_Page(driver);
-			obj6.homepg();*/
+			Home_Page obj6=new Home_Page(driver);
+			obj6.homepg();
 			
-			Search_page obj7=new Search_page(driver);
-			obj7.srch();
+			Search_page obj9=new Search_page(driver);
+			obj9.srch();
 
 			Shows_Page obj8= new Shows_Page(driver);
 			obj8.show();

@@ -10,17 +10,14 @@ public class Home_Page
 	
 	WebDriver driver;
 	
+	@FindBy(xpath = "/html/body/header/div/nav/div[1]/ul/li[1]/a")
+	WebElement hmepg;
 	
-	
-	@FindBy(xpath = "/html/body/main/section/div[4]/div/div[1]/div[1]/div/div[15]/div/a/img")
+	@FindBy(css = "#carosuel-1 > div.owl-stage-outer > div > div:nth-child(15) > div > a > img")
 	WebElement babel;
 	
-	@FindBy(xpath = "//*[@id=\"watch_now\"]/svg")
+	@FindBy(xpath = "/html/body/main/section/div[2]/div/button")
 	WebElement wtchbtn;
-	
-	@FindBy(xpath = "/html/body/main/section/div[2]/article/header/div/button[1]/svg/path[1]")
-	WebElement trailerbtn;
-	
 	
 	
 	public Home_Page(WebDriver driver) {
@@ -33,7 +30,7 @@ public class Home_Page
 	
 	public void homepg() throws InterruptedException
 	{
-		
+		hmepg.click();
 		
 		babel.click();
 		
@@ -45,7 +42,7 @@ public class Home_Page
 		
 		driver.navigate().back();
 		
-		trailerbtn.click();
+		
 	}
 	
 
