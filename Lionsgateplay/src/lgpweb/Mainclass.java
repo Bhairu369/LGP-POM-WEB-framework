@@ -50,14 +50,19 @@ public class Mainclass
 			Add_payment_details_screen obj5=new Add_payment_details_screen(driver);
 			obj5.paymentscreen();
 			
-			Home_Page obj6=new Home_Page(driver);
-			obj6.homepg();
-			
 			Search_page obj9=new Search_page(driver);
 			obj9.srch();
+			
+			Settings_Page obj10=new Settings_Page(driver);
+			obj10.setingpage();
+			
+			//Home_Page obj6=new Home_Page(driver);
+			//obj6.homepg();
+			
+			
 
-			Shows_Page obj8= new Shows_Page(driver);
-			obj8.show();
+			//Shows_Page obj8= new Shows_Page(driver);
+			//obj8.show();
 			
 	}
 

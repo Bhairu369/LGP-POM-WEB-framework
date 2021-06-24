@@ -1,9 +1,11 @@
 package lgpweb;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class Add_payment_details_screen 
 {
@@ -15,6 +17,33 @@ public class Add_payment_details_screen
 	
     @FindBy(xpath = "//*[@id=\"main\"]/div[1]/div/div[1]/div[2]/ul/li[1]/a/span[1]")
     WebElement creditcrd;
+    
+    @FindBy(id = "firstname")
+    WebElement fstnme;
+    
+    @FindBy(id = "lastname")
+    WebElement lstuname;
+    
+    @FindBy(id = "ccreditcard")
+    WebElement crdnumbr;
+    
+   /* @FindBy(id = "csecuritycode")
+    WebElement CVVbtn;
+    
+    @FindBy(id = "btnSubmitPayment")
+    WebElement submttbtn;
+    
+    @FindBy(id = "cardNumber")
+    WebElement cordno;
+    
+    @FindBy(name = "cardExpiry")
+    WebElement crdexpiry;
+    
+    @FindBy(name = "cardCvv")
+    WebElement cvva;
+    
+    @FindBy(xpath = "//*[@id=\"ccdcCardsForm\"]/button/div")
+    WebElement proceedbtn;*/
     
     @FindBy(css = "#main > div.container > div.Register.paper-bg > div > div > div.payuPlans.payuPlans-IN > div.paymentPlan2.paymentPlan.paymentPlanSelected")
     WebElement yearlyplans;
@@ -61,6 +90,32 @@ public class Add_payment_details_screen
 		
 		creditcrd.click();
 		Thread.sleep(3000);
+		
+		fstnme.sendKeys("Bhairu");
+		
+		lstuname.sendKeys("B");
+		
+		crdnumbr.sendKeys("123456789369");
+		
+		/*WebElement mnt=driver.findElement(By.cssSelector("#contentMonth > button"));
+		Select moneth=new Select(mnt);
+		moneth.selectByIndex(3);
+		
+		WebElement yr=driver.findElement(By.cssSelector("#contentYear > button"));
+		Select yere=new Select(yr);
+		yere.selectByIndex(6);
+		
+		CVVbtn.sendKeys("123");
+		
+		submttbtn.click();
+		
+		cordno.sendKeys("364535461236");
+		
+		crdexpiry.sendKeys("0623");
+		
+		cvva.sendKeys("369");
+		
+		proceedbtn.click();*/
 		
 		driver.navigate().back();
 		
