@@ -21,10 +21,32 @@ public class Settings_Page {
 	@FindBy(id = "lastName")
 	WebElement lustnme;
 	
+	/*@FindBy(id = "button_changeemail")
+	WebElement chngeemail;
 	
+	@FindBy(id = "newEmail_change")
+	WebElement newemail;
 	
+	@FindBy(name = "newConfirmEmail")
+	WebElement cnfrmemail;
 	
+	@FindBy(xpath = "//*[@id=\"changeEmail\"]/div/div/form/div[2]/button")
+	WebElement submmitbton;
 	
+	@FindBy(id = "button_changepass")
+	WebElement changpass;
+	
+	@FindBy(name = "password")
+	WebElement oldpass;
+	
+	@FindBy(id = "newPassword")
+	WebElement newpasswor;
+	
+	@FindBy(id = "passwordRetype")
+	WebElement repass;
+	
+	@FindBy(id = "changepassword-send")
+	WebElement sobmitbtn;*/
 	
 	
 	public Settings_Page(WebDriver driver)
@@ -48,5 +70,24 @@ public class Settings_Page {
 		lustnme.clear();
 		Thread.sleep(4000);
 		lustnme.sendKeys("Bhanage");
+		
+		/*chngeemail.click();
+		
+		newemail.sendKeys("testtomaksoa@yopmail.com");
+		
+		cnfrmemail.sendKeys("testtomaksoa@yopmail.com");
+		
+		Thread.sleep(3000);
+		submmitbton.click();
+		
+		changpass.click();
+		
+		oldpass.sendKeys("123456");
+		
+		newpasswor.sendKeys("1234566");
+		
+		repass.sendKeys("1234566");
+		
+		sobmitbtn.click();*/
 	}
 }

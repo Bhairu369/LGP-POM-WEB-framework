@@ -56,6 +56,9 @@ public class Mainclass
 			Settings_Page obj10=new Settings_Page(driver);
 			obj10.setingpage();
 			
+			Parental_Control obj11=new Parental_Control(driver);
+			obj11.restriction();
+			
 			//Home_Page obj6=new Home_Page(driver);
 			//obj6.homepg();
 			

@@ -16,9 +16,6 @@ public class Search_page
 	WebElement inpsrch;
 	
 	
-	
-	
-	
 	public Search_page(WebDriver driver)
 	{
 		this.driver=driver;
